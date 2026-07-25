@@ -1,0 +1,1 @@
+ALTER TABLE public.posts ADD COLUMN alterado boolean NOT NULL DEFAULT false;

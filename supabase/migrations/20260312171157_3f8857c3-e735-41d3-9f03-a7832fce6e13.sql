@@ -1,0 +1,1 @@
+ALTER TABLE posts ADD COLUMN motivo_alteracao text DEFAULT '';

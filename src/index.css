@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 60 14% 94%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 60 14% 94%;
+
+    --popover: 220 18% 12%;
+    --popover-foreground: 60 14% 94%;
+
+    --primary: 0 100% 58%;
+    --primary-foreground: 220 20% 6%;
+
+    --secondary: 220 12% 14%;
+    --secondary-foreground: 60 14% 80%;
+
+    --muted: 220 10% 12%;
+    --muted-foreground: 60 10% 50%;
+
+    --accent: 220 12% 16%;
+    --accent-foreground: 60 14% 94%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 60 14% 95%;
+
+    --border: 220 12% 16%;
+    --input: 220 12% 14%;
+    --ring: 0 100% 58%;
+
+    --radius: 0.75rem;
+
+    /* Status colors */
+    --status-criacao: 220 85% 60%;
+    --status-revisao: 0 100% 58%;
+    --status-aprovado: 150 70% 45%;
+    --status-agendado: 175 65% 45%;
+
+    /* Post type colors */
+    --type-reel: 280 70% 60%;
+    --type-carrossel: 200 80% 55%;
+    --type-story: 330 75% 55%;
+    --type-post: 0 100% 58%;
+
+    --sidebar-background: 220 16% 8%;
+    --sidebar-foreground: 60 14% 80%;
+    --sidebar-primary: 0 100% 58%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 12% 12%;
+    --sidebar-accent-foreground: 60 14% 94%;
+    --sidebar-border: 220 12% 16%;
+    --sidebar-ring: 0 100% 58%;
+
+    /* Shadows */
+    --shadow-card: 0 2px 12px -2px hsl(0 0% 0% / 0.4);
+    --shadow-elevated: 0 8px 30px -8px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 20px -5px hsl(0 100% 58% / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .status-criacao {
+    background-color: hsl(var(--status-criacao));
+    color: hsl(220 20% 6%);
+  }
+
+  .status-revisao {
+    background-color: hsl(var(--status-revisao));
+    color: hsl(220 20% 6%);
+  }
+
+  .status-aprovado {
+    background-color: hsl(var(--status-aprovado));
+    color: hsl(220 20% 6%);
+  }
+
+  .status-agendado {
+    background-color: hsl(var(--status-agendado));
+    color: hsl(220 20% 6%);
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+}
